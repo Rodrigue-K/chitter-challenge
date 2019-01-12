@@ -6,7 +6,7 @@
   </head>
   <body>
     <div>
-      <form action="/" method="post">
+      <form action="/profile" method="post">
         <input type="text" name="post">
         <input type="submit" value="share">
       </form>
@@ -20,11 +20,12 @@
     <h1>Logged in as, <%= current_user.username %></h1>
 
     <div>
-      <% @peeps.each do |peep| %>
+    <% @peeps.reverse.each do |peep| %>
     <div>
-      <%=  p peep.post %>| <%=  peep.created_at%>
+      <%=peep.post%>
     </div>
-     <% end %>
-   </div>
+      <% end %>
+    </div>
+
  </body>
 </html>
