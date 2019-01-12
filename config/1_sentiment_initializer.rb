@@ -1,5 +1,3 @@
-require 'sentimental'
+require "sentimentalizer"
 
-$analyzer = Sentimental.new
-
-$analyzer.load_defaults
+Sentimentalizer.setup

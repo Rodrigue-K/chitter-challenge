@@ -5,8 +5,10 @@
 #                  created_at: Time.now
 #                 )
 #   end
+#
 #   scenario 'Peeps have a timestamp to show when it was posted' do
 #     visit('/')
+#     signin
 #     expect(page).to have_content(Time.now)
 #   end
 # end

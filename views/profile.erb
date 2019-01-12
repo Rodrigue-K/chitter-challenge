@@ -5,13 +5,26 @@
     <title></title>
   </head>
   <body>
+    <div>
+      <form action="/" method="post">
+        <input type="text" name="post">
+        <input type="submit" value="share">
+      </form>
+    </div>
+
     <form action="/sessions" method="post">
       <input type="hidden" name="_method" value="delete">
       <input type="submit" value="Log out">
     </form>
 
-    <h1>Welcome, <%= current_user.username %>!</h1>
+    <h1>Logged in as, <%= current_user.username %></h1>
 
-    <p>username: <%= current_user.username %></p>
-  </body>
+    <div>
+      <% @peeps.each do |peep| %>
+    <div>
+      <%=  p peep.post %>| <%=  peep.created_at%>
+    </div>
+     <% end %>
+   </div>
+ </body>
 </html>

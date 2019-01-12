@@ -8,20 +8,9 @@
     <nav>
       <form action="/">
         <a href="/signin">Sign in</a>
-        <a href="/signup">Sign Up</a>
+        <a href="/signup">Sign up</a>
       </form>
     </nav>
-    <form action="/" method="post">
-      <input type="text" name="post">
-      <input type="submit" value="share">
-    </form>
-
-    <div>
-      <% @peeps.reverse.each do |peep| %>
-      <div>
-          <%=peep.post%> | <%= peep.created_at%>
-      </div>
-      <% end %>
-    </div>
+    
   </body>
 </html>
