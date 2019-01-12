@@ -20,11 +20,20 @@ feature 'Posting peep' do
     expect(page).not_to have_content("A  ")
   end
 
-  scenario 'Maker posts a blank peep' do
+  scenario 'Maker canot post a blank peep' do
     visit('/')
     fill_in "post", with: '      '
     click_button "share"
     expect(page).not_to have_content('      ')
   end
-  
+
+  scenario 'Maker wants to know the time they posted a peep' do
+    visit('/')
+    fill_in "post", with: 'What time did I post this'
+    click_button "share"
+    expect(page).to have_content('13-01-19 10:00')
+  end
+
+
+
 end

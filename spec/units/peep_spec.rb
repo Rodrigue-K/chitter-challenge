@@ -1,7 +1,7 @@
 require 'peep'
 
 describe Peep do
-  let!(:peep) { Peep.create(post: 'Hello, Chitter!') }
+  let!(:peep) { Peep.create(post: 'Hello, Chitter!', created_at: '13' ) }
   it 'can create a post' do
     expect(peep.post).to eq 'Hello, Chitter!'
   end
@@ -16,5 +16,9 @@ describe Peep do
     expect(long_post.valid?).to eq false
     expect(short_post.valid?).to eq false
     expect(valid_post.valid?).to eq true
+  end
+
+  it 'has a timestamp that shows when the peep was created' do
+    expect(peep.created_at).to eq()
   end
 end

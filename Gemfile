@@ -7,8 +7,10 @@ gem 'do_postgres', '~> 0.10.17'
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'pry'
 gem 'rake'
-gem "sinatra"
+gem 'sinatra'
+gem 'sinatra-initializers'
 gem 'travis'
+gem 'sentimental'
 
 group :test do
   gem 'capybara'
