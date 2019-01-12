@@ -1,3 +1,5 @@
+require 'rspec/expectations'
+
 RSpec::Matchers.define :appear_before do |later_post|
   match do |earlier_post|
     begin
