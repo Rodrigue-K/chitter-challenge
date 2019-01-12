@@ -5,6 +5,15 @@
     <title></title>
   </head>
   <body>
-    <h1> Infrastructure successfully set up <h1>
+    <form action="/" method="post">
+      <input type="text" name="post">
+      <input type="submit" value="share">
+    </form>
+    <div>
+      <% @peeps.reverse.each do |peep| %>
+      <div>
+        <%=peep.post%>
+      </div>
+      <% end %>
   </body>
 </html>
