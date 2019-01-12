@@ -7,6 +7,7 @@ require 'simplecov'
 require 'simplecov-console'
 
 require './app'
+require './spec/web_helpers'
 require './spec/support/simple_format.rb'
 require './spec/support/database_cleaner'
 

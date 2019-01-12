@@ -1,16 +1,17 @@
 source 'https://rubygems.org'
 
 ruby '2.5.1'
+gem 'bootstrap'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'do_postgres', '~> 0.10.17'
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'pry'
 gem 'rake'
+gem 'sentimental'
 gem 'sinatra'
 gem 'sinatra-initializers'
 gem 'travis'
-gem 'sentimental'
 
 group :test do
   gem 'capybara'

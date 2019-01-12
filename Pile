@@ -1,0 +1,9 @@
+<div>
+  <% @peeps.reverse.each do |peep| %>
+  <div>
+      <%=peep.post%> | <%= peep.created_at%>
+  </div>
+  <% end %>
+
+
+  
